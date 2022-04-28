@@ -4,6 +4,7 @@ import (
 	"fmt"
 
 	"github.com/ajaykakodia/go-dsa/searching"
+	"github.com/ajaykakodia/go-dsa/sorting"
 )
 
 func main() {
@@ -15,4 +16,13 @@ func main() {
 		return
 	}
 	fmt.Println("found at: ", index)
+	// Bubble Sort
+	arr = []int{5, 2, 7, 9, 30, 1, 17, 20, 14, 4, 3, 19}
+	sa := sorting.BubbleSort(arr)
+	fmt.Println("Bubble Sorted Array: ", sa)
+
+	// Selection Sort
+	arr = []int{5, 2, 7, 9, 30, 1, 17, 20, 14, 4, 3, 19, 8}
+	sa = sorting.SelectionSort(arr)
+	fmt.Println("Selection Sorted Array: ", sa)
 }
