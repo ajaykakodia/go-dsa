@@ -25,4 +25,9 @@ func main() {
 	arr = []int{5, 2, 7, 9, 30, 1, 17, 20, 14, 4, 3, 19, 8}
 	sa = sorting.SelectionSort(arr)
 	fmt.Println("Selection Sorted Array: ", sa)
+
+	// Insertion Sort
+	arr = []int{5, 2, 7, 9, 30, 1, 17, 20, 14, 4, 3, 19, 8}
+	sa = sorting.InsertionSort(arr)
+	fmt.Println("InsertionSort Array: ", sa)
 }
