@@ -46,4 +46,10 @@ func main() {
 	} else {
 		fmt.Println("No linting error")
 	}
+
+	rvStr := reverseString("abcde")
+	fmt.Println("reverseString: ", rvStr)
+
+	rvStr = reverseString2("abcdefghjklm")
+	fmt.Println("reverseString2: ", rvStr)
 }
