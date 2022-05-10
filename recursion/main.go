@@ -45,4 +45,19 @@ func main() {
 
 	up := uniquePath(3, 7)
 	fmt.Println("uniquePath : ", up)
+
+	countSteps = 0
+	fib := fibonacciSeries(21)
+
+	fmt.Printf("fibonacciSeries Number : %d for sequence 21 and stepCounts : %d \n", fib, countSteps)
+
+	countSteps = 0
+	fib = fibonacciSeriesMemoization(21, make(map[int]int))
+
+	fmt.Printf("fibonacciSeriesMemoization Number : %d for sequence 21 and stepCounts : %d \n", fib, countSteps)
+
+	countSteps = 0
+	fib = fibonacciSeriesBottomUp(21)
+
+	fmt.Printf("fibonacciSeriesBottomUp Number : %d for sequence 21 and stepCounts : %d \n", fib, countSteps)
 }

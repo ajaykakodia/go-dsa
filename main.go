@@ -30,4 +30,18 @@ func main() {
 	arr = []int{5, 2, 7, 9, 30, 1, 17, 20, 14, 4, 3, 19, 8}
 	sa = sorting.InsertionSort(arr)
 	fmt.Println("InsertionSort Array: ", sa)
+
+	// Quick Sort
+	arr = []int{5, 2, 7, 9, 30, 1, 17, 20, 14, 4, 3, 19, 8}
+	qs := sorting.QuickSort{}
+	qs.SetArray(arr)
+	qs.SortArray()
+
+	fmt.Println("QuickSort Array: ", qs.SortedArray())
+
+	arr1 := []int{5, 2, 7, 9, 30, 1, 17, 20, 14, 4, 3, 19, 8}
+	qs.SetArray(arr1)
+	val := qs.QuickSelect(9)
+	fmt.Println("QuickSelect Kth Value: ", val)
+
 }
