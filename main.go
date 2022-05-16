@@ -44,4 +44,45 @@ func main() {
 	val := qs.QuickSelect(9)
 	fmt.Println("QuickSelect Kth Value: ", val)
 
+	arr1 = []int{5, 2, 7, 9, 30, 1, 17, 20, 14, 4, 3, 19, 8}
+	val = sorting.GreatestProductOfThree(arr1)
+
+	fmt.Printf("GreatestProductOfThree : %d and Steps Taken :%d\n", val, sorting.StepsTaken)
+
+	sorting.StepsTaken = 0
+	arr1 = []int{5, 2, 7, 9, 30, 1, 17, 20, 14, 4, 3, 19, 8}
+	val = sorting.GreatestProductOfThree2(arr1)
+
+	fmt.Printf("GreatestProductOfThree2 : %d and Steps Taken :%d\n", val, sorting.StepsTaken)
+
+	arr1 = []int{5, 2, 7, 9, 30, 1, 17, 20, 14, 4, 3, 19, 8}
+	val = sorting.GreatestProductOfThree3(arr1)
+
+	fmt.Println("GreatestProductOfThree3 : ", val)
+
+	arr1 = []int{9, 3, 2, 5, 6, 1, 0, 4, 7, 8, 12, 15, 10, 14, 13}
+	val = sorting.MissingNumber(arr1)
+
+	fmt.Println("MissingNumber : ", val)
+
+	arr1 = []int{9, 3, 2, 5, 6, 1, 0, 4, 7, 8, 12, 15, 10, 14, 13}
+	val = sorting.MissingNumber2(arr1)
+
+	fmt.Println("MissingNumber2 : ", val)
+
+	arr1 = []int{5, 2, 7, 9, 30, 1, 17, 20, 14, 4, 3, 19, 8}
+	val = sorting.GreatestNumberInArray1(arr1)
+
+	fmt.Println("GreatestNumberInArray1 : ", val)
+
+	arr1 = []int{5, 2, 7, 9, 30, 1, 17, 20, 14, 4, 3, 19, 8}
+	val = sorting.GreatestNumberInArray2(arr1)
+
+	fmt.Println("GreatestNumberInArray2 : ", val)
+
+	arr1 = []int{5, 2, 7, 9, 30, 1, 17, 20, 14, 4, 3, 19, 8}
+	val = sorting.GreatestNumberInArray3(arr1)
+
+	fmt.Println("GreatestNumberInArray3 : ", val)
+
 }
