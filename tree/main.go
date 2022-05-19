@@ -26,4 +26,8 @@ func main() {
 	fmt.Println()
 	fmt.Println("----------------")
 	tree.PreOrderTraversal()
+	fmt.Println()
+	gtNum := tree.GreatestNumber()
+	fmt.Println("Greatest number: ", gtNum)
+
 }

@@ -30,6 +30,17 @@ func (bt *BinaryTree) Delete(nodeVale int) {
 	deleteNode(bt.root, nodeVale)
 }
 
+func (bt *BinaryTree) GreatestNumber() int {
+	return greatestNumber(bt.root)
+}
+
+func greatestNumber(n *node) int {
+	if n.rNode == nil {
+		return n.data
+	}
+	return greatestNumber(n.rNode)
+}
+
 func deleteNode(n *node, nodeValue int) *node {
 
 	if n == nil {
