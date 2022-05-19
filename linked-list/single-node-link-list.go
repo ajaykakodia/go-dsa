@@ -10,6 +10,74 @@ func (l *LinkedList) First() *node {
 	return l.head
 }
 
+func (l *LinkedList) LastElement() int {
+
+	if l.head == nil {
+		fmt.Println("No Item in Linked List")
+		return -1
+	}
+
+	currentNode := l.head
+
+	for currentNode.NextNode() != nil {
+		currentNode = currentNode.NextNode()
+	}
+	return currentNode.data
+}
+
+func (l *LinkedList) getNode(index int) *node {
+
+	if l.head == nil {
+		fmt.Println("No Node to return")
+		return nil
+	}
+
+	currentPosition := 0
+	currentNode := l.head
+
+	for currentPosition < index && currentNode != nil {
+		currentPosition++
+		currentNode = currentNode.NextNode()
+	}
+
+	return currentNode
+}
+
+func (l *LinkedList) RemoveSpecificNode(n *node) {
+
+	if n == nil && n.NextNode() == nil {
+		fmt.Println("No way we can delete this node")
+		return
+	}
+
+	nextNode := n.NextNode()
+
+	n.data = nextNode.data
+
+	n.next = nextNode.NextNode()
+
+}
+
+func (l *LinkedList) ReverseLinkList() {
+
+	if l.head == nil {
+		fmt.Println("No Item to reverse")
+		return
+	}
+
+	var previousNode, nextNode *node
+	currentNode := l.head
+
+	for currentNode != nil {
+		nextNode = currentNode.NextNode()
+		currentNode.next = previousNode
+
+		previousNode = currentNode
+		currentNode = nextNode
+	}
+	l.head = previousNode
+}
+
 func (l *LinkedList) Read() {
 	if l.head == nil {
 		fmt.Println("No Item in Linked List")
