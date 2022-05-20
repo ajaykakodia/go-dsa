@@ -14,6 +14,10 @@ func (bt *BinaryTree) Insert(nodeValue int) {
 	insert(bt.root, nodeValue)
 }
 
+func (bt *BinaryTree) Search(val int) *node {
+	return search(bt.root, val)
+}
+
 func (bt *BinaryTree) InOrderTraversal() {
 	inOrderTraversal(bt.root)
 }
@@ -101,10 +105,6 @@ func inOrderTraversal(n *node) {
 	inOrderTraversal(n.lNode)
 	fmt.Printf("%4d", n.data)
 	inOrderTraversal(n.rNode)
-}
-
-func (bt *BinaryTree) Search(val int) *node {
-	return search(bt.root, val)
 }
 
 func search(n *node, searchValue int) *node {
