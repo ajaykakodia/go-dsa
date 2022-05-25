@@ -29,4 +29,23 @@ func main() {
 	fmt.Println("Deleted data : ", heap.Delete(), " Array after delete : ", heap.data)
 	fmt.Println("Deleted data : ", heap.Delete(), " Array after delete : ", heap.data)
 	fmt.Println("Deleted data : ", heap.Delete(), " Array after delete : ", heap.data)
+
+	trie := InitTrie()
+
+	trie.Insert("Ajay")
+	trie.Insert("Yadav")
+	trie.Insert("Yaku")
+	trie.Insert("Kakodia")
+	trie.Insert("Ajay Yadav")
+	node := trie.Search("Ajay")
+
+	fmt.Println("found Node : ", node)
+
+	node = trie.Search("Ajay Yadav")
+
+	fmt.Println("found Node : ", node)
+
+	fmt.Println("All words :", getAllWords(trie.root, "", &[]string{}))
+	fmt.Println("Autocomplete words :", trie.AutoComplete("Ya"))
+	fmt.Println("AutoCorrection words :", trie.AutoCorrection("ghgfhgh"))
 }

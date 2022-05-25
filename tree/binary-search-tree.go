@@ -6,6 +6,12 @@ type BinaryTree struct {
 	root *node
 }
 
+type node struct {
+	lNode *node
+	rNode *node
+	data  int
+}
+
 func (bt *BinaryTree) Insert(nodeValue int) {
 	if bt.root == nil {
 		bt.root = &node{data: nodeValue}
@@ -132,10 +138,4 @@ func insert(parentNode *node, nodeValue int) {
 		}
 		insert(parentNode.rNode, nodeValue)
 	}
-}
-
-type node struct {
-	lNode *node
-	rNode *node
-	data  int
 }
