@@ -28,4 +28,13 @@ func main() {
 
 	anagramCheck := AnagramChecker("startle", "rattles")
 	fmt.Println("AnagramChecker :", anagramCheck)
+
+	maxProfit := StockPrediction([]int{10, 7, 5, 8, 11, 2, 6})
+	fmt.Println("StockPrediction max Profit:", maxProfit)
+
+	maxProd := HighestProductInArray([]int{5, -10, -6, -9, 4, 2, 6, 13})
+	fmt.Println("HighestProductInArray max Product:", maxProd)
+
+	longestSequence := LongestConsecutiveSequence([]int{10, 5, 12, 3, 55, 30, 4, 11, 2})
+	fmt.Println("LongestConsecutiveSequence :", longestSequence)
 }
